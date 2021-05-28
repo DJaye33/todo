@@ -1,0 +1,32 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header-title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: var(--color-primary-pure-white);
+}
+
+.Header-moon-icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1024px) {
+  .Header-title {
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: 1.5rem;
+  }
+
+  .Header-moon-icon {
+    height: 2.6rem;
+  }
+}
