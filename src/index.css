@@ -12,8 +12,11 @@
 :root {
   --color-primary-bg: #f2f2f2;
   --color-primary-pure-white: #fff;
+  --color-primary-gradient-blue: #55ddff;
+  --color-primary-gradient-purple: #c058f3;
 
-  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-input-text: #9495a5;
+  --color-very-light-gray: #fafafa;
 }
 
 html {

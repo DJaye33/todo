@@ -1,0 +1,82 @@
+.AddTodo {
+  display: flex;
+  /* align-items: center; */
+  padding: 1.4rem 2rem;
+  background-color: var(--color-primary-pure-white);
+  width: 100%;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  border-radius: 0.5rem;
+}
+
+.AddTodo-todos {
+  /* display: block; */
+  position: relative;
+  margin-right: 3.5rem;
+}
+
+.AddTodo-todos input {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.AddTodo-checkmark {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--color-input-text);
+  border-radius: 50%;
+}
+
+.AddTodo-todos:hover input ~ .AddTodo-checkmark {
+  background-color: #fbf3ff;
+}
+
+.AddTodo-todos input:checked ~ .AddTodo-checkmark {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-gradient-blue) 0%,
+    var(--color-primary-gradient-purple) 100%
+  );
+}
+
+.AddTodo-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.AddTodo-todos input:checked ~ .AddTodo-checkmark:after {
+  display: block;
+}
+
+.AddTodo-todos .AddTodo-checkmark:after {
+  top: 0.3rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 0.5rem;
+  height: 1rem;
+  border: solid var(--color-primary-pure-white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.AddTodo-create {
+  font-family: inherit;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  color: var(--color-input-text);
+  letter-spacing: 0.1rem;
+  border: none;
+  outline: transparent;
+  width: 50%;
+}
